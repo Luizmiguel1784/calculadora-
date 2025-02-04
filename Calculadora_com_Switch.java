@@ -5,7 +5,7 @@ public class Calculadora_com_Switch {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		double x, y, resultado;
+		double x, y, z, resultado;
 		char operaçao;
 		
 
@@ -13,8 +13,10 @@ public class Calculadora_com_Switch {
 		x = sc.nextDouble();
 		System.out.print("digite o segundo numero ");
 		y = sc.nextDouble();
+  System.out.print("digite o segundo numero ");
+		z = sc.nextDouble();
 		
-		System.out.print("digite a operação (+, -, *, /): ");
+		System.out.print("digite a operação (+, -, *, /, P,): ");
 		operaçao = sc.next().charAt(0);
 		switch (operaçao) {
 		case '+': 
@@ -23,6 +25,10 @@ public class Calculadora_com_Switch {
 			break;
 		case '-': 
 			resultado = x - y;
+			System.out.println("Resultado: "+ resultado);
+			break;
+   case 'P': 
+			resultado = x /100 * y;
 			System.out.println("Resultado: "+ resultado);
 			break;
 		case '*': 
